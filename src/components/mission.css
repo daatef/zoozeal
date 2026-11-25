@@ -1,0 +1,95 @@
+/* MISSION */
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.liquid-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--liquid-border);
+  border-radius: 7px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.015));
+  backdrop-filter: blur(20px);
+  transition: 0.4s ease;
+}
+
+.liquid-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 220, 69, 0.5);
+  box-shadow: 0 25px 70px rgba(255, 200, 20, 0.08);
+}
+
+.mission-card {
+  min-height: 350px;
+  padding: 35px 30px;
+}
+
+.card-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  color: #171200;
+  background: linear-gradient(135deg, #fff0a0, #e8bd24);
+  border-radius: 6px;
+  margin-bottom: 35px;
+  box-shadow: 0 8px 30px rgba(255, 220, 69, 0.12);
+}
+
+.card-number {
+  display: block;
+  color: var(--liquid-yellow);
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.mission-card h3 {
+  font-size: 21px;
+  font-weight: 800;
+  margin: 0 0 15px;
+}
+
+.mission-card p,
+.work-card p,
+.involved-card p {
+  color: var(--liquid-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.mission-card a,
+.work-arrow {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--liquid-yellow);
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.card-decoration {
+  position: absolute;
+  right: -20px;
+  bottom: -35px;
+  opacity: 0.055;
+  transform: rotate(-20deg);
+}
+
+.card-decoration svg {
+  width: 150px;
+  height: 150px;
+}
+
+.featured-card {
+  border-color: rgba(255, 220, 69, 0.35);
+  background: linear-gradient(145deg, rgba(255, 220, 69, 0.1), rgba(255, 255, 255, 0.015));
+}

@@ -1,0 +1,169 @@
+/* HERO */
+
+.liquid-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  min-height: 650px;
+  padding-top: 20px;
+}
+
+.liquid-text {
+  position: relative;
+  z-index: 2;
+}
+
+.liquid-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 220, 69, 0.45);
+  border-radius: 5px;
+  background: rgba(255, 220, 69, 0.06);
+  color: var(--liquid-yellow);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 26px;
+}
+
+.liquid-text h1 {
+  font-size: clamp(48px, 6.1vw, 88px);
+  line-height: 0.99;
+  letter-spacing: -5px;
+  font-weight: 900;
+  margin: 0 0 25px;
+}
+
+.liquid-text h1 span {
+  color: #ffdf52;
+}
+
+.liquid-text p {
+  max-width: 510px;
+  color: #aab4aa;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.liquid-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.liquid-primary,
+.liquid-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 56px;
+  padding: 0 23px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.liquid-primary {
+  background: linear-gradient(120deg, #fff0a0, #e8bd24);
+  color: #171200;
+  box-shadow: 0 5px 35px rgba(255, 220, 69, 0.18);
+  border: none;
+}
+
+.liquid-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(255, 220, 69, 0.3);
+}
+
+.liquid-secondary {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+}
+
+.liquid-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.liquid-social-proof {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 38px;
+}
+
+.liquid-avatars {
+  display: flex;
+}
+
+.liquid-avatars span {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  margin-left: -7px;
+  border: 2px solid #071008;
+  border-radius: 5px;
+  background: #352e13;
+}
+
+.liquid-avatars span:first-child {
+  margin-left: 0;
+}
+
+.liquid-social-proof strong,
+.liquid-social-proof small {
+  display: block;
+}
+
+.liquid-social-proof strong {
+  font-size: 12px;
+}
+
+.liquid-social-proof small {
+  color: #899589;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.liquid-visual {
+  height: 700px;
+  position: relative;
+}
+
+.liquid-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.liquid-canvas canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero-bottom-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #82877d;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero-bottom-line span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

@@ -1,0 +1,51 @@
+/* GET INVOLVED */
+
+.involved-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.involved-card {
+  position: relative;
+  padding: 35px 28px;
+  min-height: 360px;
+  border: 1px solid var(--liquid-border);
+  border-radius: 7px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015));
+  transition: 0.4s;
+}
+
+.involved-card:hover {
+  transform: translateY(-9px);
+  border-color: rgba(255, 220, 69, 0.45);
+  box-shadow: 0 20px 60px rgba(255, 220, 69, 0.07);
+}
+
+.involved-icon {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  color: #171200;
+  background: linear-gradient(135deg, #fff0a0, #e8bd24);
+  border-radius: 6px;
+  margin-bottom: 32px;
+}
+
+.involved-card > span {
+  color: var(--liquid-yellow);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.involved-card h3 {
+  font-size: 21px;
+  font-weight: 800;
+  margin: 13px 0;
+}
+
+.involved-card .text-link {
+  margin-top: 18px;
+}

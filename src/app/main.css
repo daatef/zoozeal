@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --liquid-bg: #030704;
+  --liquid-card: rgba(255, 255, 255, 0.045);
+  --liquid-yellow: #ffdc45;
+  --liquid-yellow-light: #fff0a0;
+  --liquid-yellow-dark: #c99512;
+  --liquid-text: #ffffff;
+  --liquid-muted: #aab4aa;
+  --liquid-border: rgba(255, 255, 255, 0.12);
+}
+/* Anchor scrolling offset */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+/* GLOBAL SECTIONS */
+
+.liquid-section {
+  position: relative;
+  isolation: isolate;
+  padding: 125px 15%;
+  background: #030704;
+  overflow: hidden;
+}
+
+.section-glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glow-right {
+  right: -250px;
+  top: 20%;
+  background: rgba(255, 205, 35, 0.1);
+}
+
+.glow-left {
+  left: -250px;
+  bottom: 0;
+  background: rgba(201, 149, 18, 0.1);
+}
+
+.section-heading {
+  max-width: 750px;
+  margin: 0 auto 65px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.section-heading .liquid-eyebrow {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-size: clamp(38px, 5vw, 65px);
+  font-weight: 900;
+  letter-spacing: -3px;
+  line-height: 1.08;
+  margin: 0 0 22px;
+}
+
+.section-heading h2 span {
+  color: var(--liquid-yellow);
+}
+
+.section-heading p {
+  max-width: 620px;
+  margin: auto;
+  color: var(--liquid-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ANIMATIONS */
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1400px) {
+  .liquid-hero,
+  .liquid-section,
+  .donate-section,
+  .liquid-footer,
+  .liquid-navbar,
+  .animal-section {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .liquid-nav-links {
+    gap: 18px;
+  }
+
+  .liquid-nav-links a {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .liquid-hero,
+  .liquid-navbar,
+  .liquid-section,
+  .donate-section,
+  .liquid-footer,
+  .animal-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .liquid-nav-links {
+    gap: 12px;
+  }
+
+  .liquid-nav-links a {
+    font-size: 10px;
+  }
+
+  .liquid-donate {
+    padding: 12px 14px;
+    font-size: 11px;
+  }
+
+  .about-grid {
+    gap: 45px;
+  }
+
+  .mission-grid,
+  .involved-grid {
+    gap: 14px;
+  }
+
+  .footer-main {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 850px) {
+  .liquid-hero {
+    padding: 15px 4% 25px;
+  }
+
+  .liquid-navbar {
+    height: 70px;
+    padding: 15px 4% 25px;
+  }
+
+  .liquid-content {
+    grid-template-columns: 1fr;
+    padding-top: 55px;
+  }
+
+  .liquid-text {
+    text-align: center;
+  }
+
+  .liquid-text h1 {
+    font-size: clamp(50px, 10vw, 76px);
+  }
+
+  .liquid-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .liquid-buttons,
+  .liquid-social-proof {
+    justify-content: center;
+  }
+
+  .liquid-visual {
+    height: 470px;
+    margin-top: -15px;
+  }
+
+  .liquid-section {
+    padding: 90px 5%;
+  }
+
+  .about-grid,
+  .animal-section {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-visual {
+    max-width: 560px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .about-content {
+    max-width: 650px;
+    margin: auto;
+  }
+
+  .mission-grid,
+  .involved-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mission-card:last-child,
+  .involved-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .animal-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .animal-visual {
+    max-width: 350px;
+  }
+
+  .donate-inner {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .donate-content {
+    text-align: center;
+  }
+
+  .donate-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .donate-content .liquid-buttons {
+    justify-content: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .liquid-hero {
+    padding: 12px 4% 20px;
+  }
+  .liquid-navbar {
+    padding: 12px 4% 20px;
+  }
+
+  .liquid-logo {
+    font-size: 17px;
+    gap: 8px;
+  }
+
+  .liquid-logo svg {
+    width: 29px;
+  }
+
+  .liquid-donate {
+    padding: 11px 14px;
+    font-size: 10px;
+  }
+
+  .liquid-text h1 {
+    font-size: 48px;
+    letter-spacing: -2.5px;
+  }
+
+  .liquid-text p {
+    font-size: 13px;
+  }
+
+  .liquid-primary,
+  .liquid-secondary {
+    min-height: 49px;
+    padding: 0 14px;
+    font-size: 10px;
+  }
+
+  .liquid-visual {
+    height: 350px;
+  }
+
+  .hero-bottom-line {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .liquid-section {
+    padding: 75px 5%;
+  }
+
+  .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .section-heading h2 {
+    font-size: 39px;
+    letter-spacing: -2px;
+  }
+
+  .section-heading p {
+    font-size: 12px;
+  }
+
+  .about-grid {
+    gap: 45px;
+  }
+
+  .about-visual {
+    min-height: 350px;
+  }
+
+  .about-image-card {
+    height: 330px;
+  }
+
+  .about-floating-card {
+    right: -5px;
+    bottom: 15px;
+    padding: 13px;
+  }
+
+  .about-orbit {
+    width: 110px;
+    height: 110px;
+    right: -5px;
+  }
+
+  .about-content h2 {
+    font-size: 46px;
+  }
+
+  .about-stats {
+    gap: 25px;
+  }
+
+  .about-stats strong {
+    font-size: 27px;
+  }
+
+  .mission-grid,
+  .involved-grid,
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card:last-child,
+  .involved-card:last-child {
+    grid-column: auto;
+  }
+
+  .mission-card,
+  .involved-card {
+    min-height: 310px;
+  }
+
+  .work-card {
+    min-height: 310px;
+    padding: 25px;
+  }
+
+  .animal-section {
+    padding: 70px 5%;
+    gap: 25px;
+  }
+
+  .animal-content h2 {
+    font-size: 46px;
+    letter-spacing: -2px;
+  }
+
+  .animal-icons {
+    flex-wrap: wrap;
+    gap: 17px;
+  }
+
+  .animal-icons div {
+    gap: 6px;
+  }
+
+  .animal-visual {
+    max-width: 290px;
+  }
+
+  .animal-center {
+    width: 135px;
+    height: 135px;
+  }
+
+  .animal-center svg {
+    width: 70px;
+  }
+
+  .animal-mini {
+    width: 48px;
+    height: 48px;
+    font-size: 23px;
+  }
+
+  .donate-section {
+    padding: 65px 5%;
+  }
+
+  .donate-visual {
+    width: 250px;
+    height: 250px;
+  }
+
+  .donate-paw {
+    width: 145px;
+    height: 145px;
+  }
+
+  .donate-paw svg {
+    width: 65px;
+  }
+
+  .donate-content h2 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .donate-content .liquid-buttons {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    padding: 22px 17px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-info h3 {
+    font-size: 25px;
+  }
+
+  .liquid-footer {
+    padding: 60px 5% 0;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 20px;
+  }
+
+  .footer-brand,
+  .footer-cta {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zoozeal-page *,
+  .zoozeal-page *::before,
+  .zoozeal-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .donate-heart-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .donate-sparkle {
+    position: absolute;
+    color: #ffd43b;
+    pointer-events: none;
+    animation: donateSparkle 2s ease-in-out infinite;
+  }
+
+  .sparkle-one {
+    top: 5px;
+    right: 0;
+    font-size: 30px;
+  }
+
+  .sparkle-two {
+    bottom: 5px;
+    left: 0;
+    font-size: 25px;
+    animation-delay: 1s;
+  }
+
+  @keyframes donateSparkle {
+    0%,
+    100% {
+      opacity: 0.35;
+      transform: scale(0.7) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.25) rotate(25deg);
+    }
+  }
+}

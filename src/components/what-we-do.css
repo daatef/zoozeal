@@ -1,0 +1,81 @@
+/* WHAT WE DO */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.work-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+  padding: 32px;
+  border: 1px solid var(--liquid-border);
+  border-radius: 7px;
+  background: radial-gradient(circle at 100% 0%, rgba(255, 220, 69, 0.07), transparent 55%), rgba(255, 255, 255, 0.025);
+  transition: 0.4s;
+}
+
+.work-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(255, 220, 69, 0.5);
+  background: radial-gradient(circle at 100% 0%, rgba(255, 220, 69, 0.13), transparent 55%), rgba(255, 255, 255, 0.04);
+}
+
+.work-card-large,
+.work-card-wide {
+  background: radial-gradient(circle at 100% 0%, rgba(255, 220, 69, 0.13), transparent 60%), rgba(255, 255, 255, 0.035);
+}
+
+.work-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.work-card-top > span {
+  color: #72776b;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.work-card .card-icon {
+  margin: 0;
+  width: 52px;
+  height: 52px;
+}
+
+.work-category {
+  color: var(--liquid-yellow);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.work-card h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 13px 0;
+}
+
+.work-card p {
+  max-width: 420px;
+}
+
+.work-watermark {
+  position: absolute;
+  right: -35px;
+  bottom: -45px;
+  width: 180px;
+  height: 180px;
+  color: var(--liquid-yellow);
+  opacity: 0.035;
+  transform: rotate(-25deg);
+  pointer-events: none;
+}
+
+.work-arrow {
+  margin-top: 15px;
+}
