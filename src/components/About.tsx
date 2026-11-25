@@ -1,6 +1,6 @@
 "use client";
 
-import { PawPrint, Heart, ArrowRight, Play, Leaf, ArrowUpRight } from "lucide-react";
+import { PawPrint, Heart, ArrowUpRight } from "lucide-react";
 
 import "./about.css";
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, PawPrint, Heart } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 import "./navbar.css";
 import Image from "next/image";
 

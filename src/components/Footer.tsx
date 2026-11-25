@@ -1,5 +1,5 @@
 import "./footer.css";
-import { PawPrint, Instagram, Facebook, Twitter, Heart, ArrowRight } from "lucide-react";
+import { Instagram, Facebook, Twitter, Heart, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {

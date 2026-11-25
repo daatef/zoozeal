@@ -1,6 +1,6 @@
 import "./get-involved.css";
 import { HandHeart, ArrowRight, Heart, Globe } from "lucide-react";
-import SectionHeading from "@/src/components/sectionHeading";
+import SectionHeading from "./SectionHeading";
 export default function GetInvolvedSection() {
   return (
     <section className="liquid-section involved-section" id="involved">

@@ -1,14 +1,10 @@
 import "./what-we-do.css";
-import SectionHeading from "@/src/components/SectionHeading";
+import SectionHeading from "./SectionHeading";
 
 import {
   ArrowUpRight,
   PawPrint,
   Stethoscope,
-  ArrowRight,
-  Play,
-  Leaf,
-  SparkleIcon,
   TreePine,
   Users,
 } from "lucide-react";

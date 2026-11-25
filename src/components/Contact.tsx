@@ -1,7 +1,7 @@
 import "./contact.css";
 
 import { Mail, MapPin, Heart, ArrowRight, Instagram, Facebook, Twitter } from "lucide-react";
-import SectionHeading from "@/src/components/SectionHeading";
+import SectionHeading from "./SectionHeading";
 export default function ContactSection() {
   return (
     <section className="liquid-section contact-section" id="contact">
@@ -16,7 +16,7 @@ export default function ContactSection() {
 
       <div className="contact-grid">
         <div className="contact-info">
-          <h3>Let's make a difference together.</h3>
+          <h3>Let&apos;s make a difference together.</h3>
           <p>Whether you want to volunteer, collaborate, or simply learn more about our work, get in touch.</p>
 
           <div className="contact-info-item">

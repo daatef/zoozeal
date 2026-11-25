@@ -1,7 +1,7 @@
 import "./mission.css";
 
-import { ShieldCheck, ArrowUpRight, Heart, Globe, HeartHandshake, PawPrint, SparkleIcon } from "lucide-react";
-import SectionHeading from "@/src/components/SectionHeading";
+import { ShieldCheck, ArrowUpRight, Heart, Globe, HeartHandshake, PawPrint } from "lucide-react";
+import SectionHeading from "./SectionHeading";
 
 export default function MissionSection() {
   return (
