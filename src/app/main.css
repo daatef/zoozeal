@@ -1,4 +1,9 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+/* ========================================
+   ROOT VARIABLES
+======================================== */
 
 :root {
   --liquid-bg: #030704;
@@ -10,20 +15,79 @@
   --liquid-muted: #aab4aa;
   --liquid-border: rgba(255, 255, 255, 0.12);
 }
-/* Anchor scrolling offset */
+
+/* ========================================
+   GLOBAL RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 30px;
 }
 
-/* GLOBAL SECTIONS */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--liquid-bg);
+  color: var(--liquid-text);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========================================
+   MAIN PAGE
+======================================== */
+
+.zoozeal-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--liquid-bg);
+  color: var(--liquid-text);
+  font-family: "Inter", sans-serif;
+}
+
+/* ========================================
+   GLOBAL SECTIONS
+======================================== */
 
 .liquid-section {
   position: relative;
   isolation: isolate;
   padding: 125px 15%;
-  background: #030704;
+  background: var(--liquid-bg);
   overflow: hidden;
 }
 
@@ -48,6 +112,10 @@ html {
   bottom: 0;
   background: rgba(201, 149, 18, 0.1);
 }
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
 
 .section-heading {
   max-width: 750px;
@@ -81,13 +149,16 @@ html {
   line-height: 1.9;
 }
 
-/* ANIMATIONS */
+/* ========================================
+   ANIMATIONS
+======================================== */
 
 @keyframes pulse {
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.06);
   }
@@ -97,12 +168,59 @@ html {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-/* RESPONSIVE */
+/* ========================================
+   DONATE ANIMATIONS
+======================================== */
+
+.donate-heart-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate-sparkle {
+  position: absolute;
+  color: var(--liquid-yellow);
+  pointer-events: none;
+  animation: donateSparkle 2s ease-in-out infinite;
+}
+
+.sparkle-one {
+  top: 5px;
+  right: 0;
+  font-size: 30px;
+}
+
+.sparkle-two {
+  bottom: 5px;
+  left: 0;
+  font-size: 25px;
+  animation-delay: 1s;
+}
+
+@keyframes donateSparkle {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.7) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.25) rotate(25deg);
+  }
+}
+
+/* ========================================
+   RESPONSIVE: 1400px
+======================================== */
 
 @media (max-width: 1400px) {
   .liquid-hero,
@@ -123,6 +241,10 @@ html {
     font-size: 11px;
   }
 }
+
+/* ========================================
+   RESPONSIVE: 1050px
+======================================== */
 
 @media (max-width: 1050px) {
   .liquid-hero,
@@ -161,6 +283,10 @@ html {
     gap: 25px;
   }
 }
+
+/* ========================================
+   RESPONSIVE: 850px
+======================================== */
 
 @media (max-width: 850px) {
   .liquid-hero {
@@ -268,10 +394,15 @@ html {
   }
 }
 
+/* ========================================
+   RESPONSIVE: 550px
+======================================== */
+
 @media (max-width: 550px) {
   .liquid-hero {
     padding: 12px 4% 20px;
   }
+
   .liquid-navbar {
     padding: 12px 4% 20px;
   }
@@ -489,6 +620,10 @@ html {
   }
 }
 
+/* ========================================
+   ACCESSIBILITY: REDUCED MOTION
+======================================== */
+
 @media (prefers-reduced-motion: reduce) {
   .zoozeal-page *,
   .zoozeal-page *::before,
@@ -497,43 +632,5 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-  .donate-heart-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .donate-sparkle {
-    position: absolute;
-    color: #ffd43b;
-    pointer-events: none;
-    animation: donateSparkle 2s ease-in-out infinite;
-  }
-
-  .sparkle-one {
-    top: 5px;
-    right: 0;
-    font-size: 30px;
-  }
-
-  .sparkle-two {
-    bottom: 5px;
-    left: 0;
-    font-size: 25px;
-    animation-delay: 1s;
-  }
-
-  @keyframes donateSparkle {
-    0%,
-    100% {
-      opacity: 0.35;
-      transform: scale(0.7) rotate(0deg);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.25) rotate(25deg);
-    }
   }
 }
